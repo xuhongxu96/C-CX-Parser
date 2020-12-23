@@ -1,0 +1,9 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "antlr4.generation": {
+        "mode": "internal",
+        "language": "Java",
+        "listeners": true,
+        "visitors": false
+    }
+}

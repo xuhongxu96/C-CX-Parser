@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "com.microsoft.calculator.App",
+            "projectName": "cppcxparser"
+        },
+        {
+            "name": "Debug ANTLR4 grammar",
+            "type": "antlr-debug",
+            "request": "launch",
+            "input": "cppcxparser/src/main/resources/example.cpp",
+            "grammar": "cppcxparser/src/main/antlr4/com/microsoft/CPPCXParser.g4",
+            "startRule": "translationUnit",
+            "printParseTree": true,
+            "visualParseTree": true
+        }
+    ]
+}
