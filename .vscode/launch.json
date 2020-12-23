@@ -12,7 +12,7 @@
             "name": "Debug ANTLR4 grammar",
             "type": "antlr-debug",
             "request": "launch",
-            "input": "cppcxparser/src/main/resources/example.cpp",
+            "input": "cppcxparser/src/main/resources/min.cpp",
             "grammar": "cppcxparser/src/main/antlr4/com/microsoft/CPPCXParser.g4",
             "startRule": "translationUnit",
             "printParseTree": true,
