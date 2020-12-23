@@ -11,6 +11,8 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.TokenStream;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 // property
 // attribute
@@ -27,7 +29,10 @@ public class App {
             TokenStream tokenStream = new CommonTokenStream(lexer);
             CPPCXParser parser = new CPPCXParser(tokenStream);
 
-            TranslationUnitContext unit = parser.translationUnit();
+            TranslationUnitContext tu = parser.translationUnit();
+
+            CxListener listener = new CxListener();
+            ParseTreeWalker.DEFAULT.walk(listener, tu);
 
         } catch (IOException e) {
             e.printStackTrace();
